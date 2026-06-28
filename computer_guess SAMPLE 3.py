@@ -1,21 +1,26 @@
-# SAMPLE 3 with function and user can set the range of guessing number by passing the value in function
+# SAMPLE 3 same as above but this time we will ask the user to provide the range for the computer to guess from 1 to x and also count the number of attempts it took to guess correctly.
 
 import random
-def guess(x):
-     comp = random.randint(1,x)
-     attemps = 0
-     while True:
-         user = int(input(f"Guess the Number Btw 1 to {x}: "))
-         attemps = attemps + 1
-         
-         if(user == comp):
-           print(f"You guessed the right Number {comp}\nYour attemps were {attemps}")
-           break
 
-         elif(user>comp):
-          print("LOWER IT PLZ")
+def cg():
+   low = 1
+   a = 0
+   high = int(input("What should be the guessing Number range from 1 to ? : "))
+   while True:
+      comp = random.randint(low,high)
+      user = input(f"Is the Number {comp}\nHigher(h)\nLower (l)\nCorrect (c)\n : ").lower()
+      a = a+1
 
-         elif(user<comp):
-          print("HIGHER IT PLZ")
+      if(user == "c"):
+         print(f"Yess guessed the right Number in {a} Attempts")
 
-guess(30)
+      elif(user == "h"):
+         low = comp + 1
+
+      elif(user == "l"):
+         high = comp - 1
+
+      print("-------------------------------------------------------------------------------------------------------------------")
+
+cg()
+cg()
