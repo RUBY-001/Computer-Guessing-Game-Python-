@@ -1,5 +1,3 @@
-# SAMPLE 1 imple straight forward code for guessing number game
-
 # SAMPLE 1  Straightforward approach to computer guessing a number between 1 and x where computer guesses
 # randomly and user (us) provides feedback on whether the guess is too high, too low, or correctand
 # we aslo provide x the argument to the function computer_guess(x) as a range for the computer to guess from 1 to x.
@@ -27,3 +25,4 @@ def computer_guess(x):
     print(f'Yay! The computer guessed your number, {guess}, correctly! under {attempts} attempts!')
 
 computer_guess(100)
+
